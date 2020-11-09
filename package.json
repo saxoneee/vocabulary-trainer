@@ -1,5 +1,5 @@
 {
-  "name": "vue-vocabulary-validator",
+  "name": "vocabulary-trainer",
   "version": "0.0.1",
   "description": "",
   "main": "src/main.js",
@@ -16,5 +16,8 @@
     "webpack-cli": "^4.2.0",
     "webpack-dev-server": "^3.11.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "vue": "^2.6.12"
+  }
 }
