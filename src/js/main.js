@@ -1,9 +1,9 @@
 (function(app){
     var data = [
-        'ja;はい;hai',
-        'nein;いいえ;iie',
-        'vielleicht;たぶん;tabun',
-        'Toastbrot;トースト;Tōsuto;tosuto'
+        'yes;はい;hai',
+        'no;いいえ;iie',
+        'maybe;たぶん;tabun',
+        'toast;トースト;Tōsuto;tosuto'
     ];
 
     new Vue({
