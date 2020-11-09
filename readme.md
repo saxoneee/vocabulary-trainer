@@ -18,6 +18,6 @@ basic app to test [vue.js](https://vuejs.org/)
 | maybe      | たぶん | tabun |
 | toast      | トースト | Tōsuto (tosuto) |
 
-## Licence
+## License
 
 MIT
