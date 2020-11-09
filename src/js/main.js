@@ -1,10 +1,6 @@
 (function(app){
-    var data = [
-        'yes;はい;hai',
-        'no;いいえ;iie',
-        'maybe;たぶん;tabun',
-        'toast;トースト;Tōsuto;tosuto'
-    ];
+    var data = null,
+        language = 'ja';
 
     new Vue({
         el: '#vocabulary',
@@ -22,10 +18,16 @@
         },
 
         /**
-         * app is ready
+         * vue is ready
          */
         created: function(){
-            this.initQuestion();
+            var _me = this,
+                _promise = app.utils.ajax.get('data/data.json');
+
+            _promise.done(function(pData){
+                data = pData[language];
+                _me.initQuestion();
+            });
         },
 
         methods: {
