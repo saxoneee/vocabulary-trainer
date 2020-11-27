@@ -1,22 +1,8 @@
-# vue vocabulary validator
+# vocabulary-trainer
 
-basic app to test [vue.js v2](https://vuejs.org/)
+basic app to test some frameworks
 
-## usage
-
-* run `npm install` once
-* run `npm run dev`
-* open http://localhost:8000/
-* use kana or romaji (see table below)
-
-## vocabulary
-
-| english        | japanese kana | romaji  |
-| ------------- |-------------| ----- |
-| yes      | はい | hai |
-| no      | いいえ | iie |
-| maybe      | たぶん | tabun |
-| toast      | トースト | Tōsuto (tosuto) |
+* [vue.js v2](https://vuejs.org/) - branch feature/vue
 
 ## License
 
