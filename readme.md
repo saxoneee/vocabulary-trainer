@@ -1,6 +1,6 @@
 # vocabulary-trainer
 
-basic app to test some frameworks
+learn your vocabulary
 
 * [vue.js v2](https://vuejs.org/) - branch feature/vue
 
