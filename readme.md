@@ -1,6 +1,6 @@
 # vue vocabulary validator
 
-basic app to test [vue.js v2](https://vuejs.org/)
+learn your vocabulary
 
 ## usage
 
