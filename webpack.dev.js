@@ -40,6 +40,9 @@ module.exports = {
 				to: './css'
 			},{
 				from: './node_modules/vue/dist/vue.min.js',
+				to: './vue/dist'
+			},{
+				from: './node_modules/jquery/dist/jquery.min.js',
 				to: './jquery/dist'
 			},{
 				from: './src/data/data.json',
