@@ -2,7 +2,11 @@
 
 learn your vocabulary
 
-## usage
+## example
+
+https://saxoneee.github.io/vocabulary-trainer/dist/
+
+## dev
 
 * run `npm install` once
 * run `npm run dev`
