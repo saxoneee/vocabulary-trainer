@@ -1,0 +1,21 @@
+body{
+    font-family: Tahoma;
+    font-size:20px;
+}
+input, button{
+    font-size:1em;
+}
+input{
+    padding:10px;
+    margin-bottom:5px;
+}
+button{
+    width:100%;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin-bottom:5px;
+}
+.box{
+    display:inline-block;
+    vertical-align:top;
+}
