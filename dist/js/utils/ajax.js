@@ -1,0 +1,1 @@
+!function(t){t.utils.ajax={get:function(t){return $.get(t)}}}(app);

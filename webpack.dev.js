@@ -27,6 +27,15 @@ module.exports = {
 				from: './src/js/main.js',
 				to: './js'
 			},{
+				from: './src/js/base/ns.js',
+				to: './js/base'
+			},{
+				from: './src/js/utils/ajax.js',
+				to: './js/utils'
+			},{
+				from: './src/js/utils/number.js',
+				to: './js/utils'
+			},{
 				from: './src/css/styles.css',
 				to: './css'
 			},{
