@@ -22,6 +22,12 @@ https://saxoneee.github.io/vocabulary-trainer/dist/
 | maybe      | たぶん | tabun |
 | toast      | トースト | Tōsuto (tosuto) |
 
+## todo
+
+* case insensitive romaji
+* mobile optimization
+* vocabulary groups
+
 ## License
 
 MIT
