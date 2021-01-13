@@ -8,7 +8,7 @@ class PhpServerWebpackPlugin {
 	constructor(cfg) {
 		this.phpServerCfg = cfg;
 	}
-	
+
 	apply(compiler) {
 		// Specify the event hook to attach to
 		compiler.hooks.emit.tapAsync('PhpServerWebpackPlugin',(compilation, callback) => {
@@ -75,7 +75,8 @@ module.exports = {
 		new PhpServerWebpackPlugin({
 			hostname: '127.0.0.1',
 			port: '8008',
-			base: 'src/php'
+			base: 'src/php',
+			router: 'server.php'
 		})
 	]
 };
