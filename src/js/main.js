@@ -22,7 +22,7 @@
          */
         created: function(){
             var _me = this,
-                _promise = app.utils.ajax.get('data/data.json');
+                _promise = app.utils.ajax.get('api/data');
 
             _promise.done(function(pData){
                 data = pData[language];
