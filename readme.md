@@ -2,10 +2,6 @@
 
 learn your vocabulary
 
-## example
-
-https://saxoneee.github.io/vocabulary-trainer/dist/
-
 ## dev
 
 * php version 7.x
