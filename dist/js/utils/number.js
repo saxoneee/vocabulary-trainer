@@ -1,1 +1,0 @@
-!function(n){n.utils.number={randomIntFromInterval:(n,a)=>Math.floor(Math.random()*(a-n+1)+n)}}(app);
