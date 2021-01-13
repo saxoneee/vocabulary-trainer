@@ -2,6 +2,28 @@ var path = require('path'),
 	{ CleanWebpackPlugin } = require('clean-webpack-plugin'),
 	CopyWebpackPlugin = require('copy-webpack-plugin');
 
+class PhpServerWebpackPlugin {
+	phpServerCfg;
+	
+	constructor(cfg) {
+		this.phpServerCfg = cfg;
+	}
+	
+	apply(compiler) {
+		// Specify the event hook to attach to
+		compiler.hooks.emit.tapAsync('PhpServerWebpackPlugin',(compilation, callback) => {
+			const phpServer = require('php-server');
+			
+			(async () => {
+				const server = await phpServer(this.phpServerCfg);
+				console.log(`PHP server running at ${server.url}`)
+			})();
+		
+			callback();
+		});
+	}
+}
+
 module.exports = {
 	entry: './src/js/main.js',
 	output: {
@@ -49,6 +71,11 @@ module.exports = {
 				to: './data'
 			}
 		]
+		}),
+		new PhpServerWebpackPlugin({
+			hostname: '127.0.0.1',
+			port: '8008',
+			base: 'src/php'
 		})
 	]
 };
