@@ -1,24 +1,45 @@
 var path = require('path'),
+	webpack = require('webpack'),
 	{ CleanWebpackPlugin } = require('clean-webpack-plugin'),
-	CopyWebpackPlugin = require('copy-webpack-plugin');
+	CopyWebpackPlugin = require('copy-webpack-plugin'),
+	HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var _webpackCfg = {
+	mode: 'development',
 	entry: './src/js/main.js',
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 	},
 
+	module: {
+		rules: [{
+			test: /\.css$/i,
+			use: ["style-loader", "css-loader"],
+		},{
+			test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/i,
+			use: ['file-loader']
+		},{
+			test: require.resolve('jquery'),
+			use: [{
+				loader: 'expose-loader',
+				options: {
+					exposes: ['$', 'jQuery']
+				}
+			}]
+		}
+	]},
+
 	plugins: [
-		new CleanWebpackPlugin({
-			cleanAfterEveryBuildPatterns: [
-				path.resolve(__dirname, 'dist','main.js')
-			]
+		new webpack.ProvidePlugin({
+			$: 'jquery',
+			jQuery: 'jquery'
 		}),
+		new HtmlWebpackPlugin({
+			template: './src/html/index.html'
+		}),
+		new CleanWebpackPlugin(),
 		new CopyWebpackPlugin({
 			patterns: [{
-				from: './src/index.html',
-				to: './'
-			},{
 				from: './src/js/main.js',
 				to: './js'
 			},{

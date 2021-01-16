@@ -27,10 +27,6 @@ class PhpServerWebpackPlugin {
 
 webpackBuildCfg.devServer = {
     open: false,
-    contentBase: [
-        path.join(__dirname, 'src'),
-        path.join(__dirname, 'node_modules'),
-    ],
     port: 8000,
     proxy: {
         '/api': 'http://localhost:8008'

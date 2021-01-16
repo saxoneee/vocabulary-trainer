@@ -1,2 +1,3 @@
-var app = app || {};
+window.app = window.app || {};
+
 app.utils = app.utils || {};

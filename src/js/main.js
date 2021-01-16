@@ -1,3 +1,10 @@
+import './base/ns';
+import './utils/ajax';
+import './utils/number';
+
+import './../css/styles.css';
+
+import Vue from 'vue/dist/vue';
 (function(app){
     var data = null,
         language = 'ja';
