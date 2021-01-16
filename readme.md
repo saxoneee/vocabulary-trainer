@@ -2,6 +2,13 @@
 
 learn your vocabulary
 
+## used technologies
+
+* webpack
+* vue js 2
+* onsen ui
+* jquery
+
 ## dev
 
 * php version 7.x
@@ -20,13 +27,3 @@ learn your vocabulary
 | no      | いいえ | iie |
 | maybe      | たぶん | tabun |
 | toast      | トースト | Tōsuto (tosuto) |
-
-## todo
-
-* case insensitive romaji
-* mobile optimization
-* vocabulary groups
-
-## License
-
-MIT

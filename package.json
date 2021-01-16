@@ -10,7 +10,11 @@
   "bin": {
     "webpack": "./node_modules/.bin/webpack"
   },
-  "author": "saxoneee",
+  "author": {
+    "name": "Hendrik Sachse",
+    "email": "hendrik.sachse@gmail.com",
+    "url": "http://www.hendriksachse.de"
+  },
   "license": "MIT",
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
