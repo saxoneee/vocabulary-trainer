@@ -40,7 +40,7 @@ var _webpackCfg = {
 				to: './data'
 			},{
 				from: './src/php',
-				to: './php'
+				to: './api'
 			}
 		]
 		})
