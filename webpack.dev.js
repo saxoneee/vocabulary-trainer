@@ -1,3 +1,5 @@
+// enrich webpack cfg for development
+
 var path = require('path'),
     webpackBuildCfg = require('./webpack.build.js');
 

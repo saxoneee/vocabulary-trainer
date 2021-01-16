@@ -9,7 +9,11 @@ var _webpackCfg = {
 	},
 
 	plugins: [
-		new CleanWebpackPlugin(),
+		new CleanWebpackPlugin({
+			cleanAfterEveryBuildPatterns: [
+				path.resolve(__dirname, 'dist','main.js')
+			]
+		}),
 		new CopyWebpackPlugin({
 			patterns: [{
 				from: './src/index.html',
