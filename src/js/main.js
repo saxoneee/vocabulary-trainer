@@ -5,9 +5,16 @@ import './utils/number';
 import './../css/styles.css';
 
 import Vue from 'vue/dist/vue';
+
+import 'onsenui/css/onsenui.css';
+import 'onsenui/css/onsen-css-components.css';
+import VueOnsen from 'vue-onsenui';
+
 (function(app){
     var data = null,
         language = 'ja';
+
+    Vue.use(VueOnsen);
 
     new Vue({
         el: '#vocabulary',

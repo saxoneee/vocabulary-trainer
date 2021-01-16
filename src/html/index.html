@@ -15,10 +15,11 @@
                     <br>
                     <input type="text" autocomplete="off" v-model="answer" ref="answer" :disabled="showValidation && isValid">
                     <br>
-                    <button :hidden="showValidation && isValid">validate</button>
+                    <!--<button :hidden="showValidation && isValid">validate</button>-->
+                    <v-ons-button :hidden="showValidation && isValid">validate</v-ons-button>
                 </form>
                 <form v-on:submit.prevent="onSkipFormSubmit" :hidden="showValidation && isValid">
-                    <button>skip</button>
+                    <v-ons-button>skip</v-ons-button>
                 </form>
                 
                 <form v-on:submit.prevent="onResultFormSubmit" :hidden="!showValidation">
