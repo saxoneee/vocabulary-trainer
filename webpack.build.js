@@ -43,17 +43,21 @@ var _webpackCfg = {
 				from: './src/js/main.js',
 				to: './js'
 			},{
-				from: './src/js/base/ns.js',
-				to: './js/base'
+				from: '*.js',
+				to: './js/base',
+				context: './src/js/base'
 			},{
-				from: './src/js/utils/ajax.js',
-				to: './js/utils'
+				from: '*.js',
+				to: './js/utils',
+				context: './src/js/utils'
 			},{
-				from: './src/js/utils/number.js',
-				to: './js/utils'
+				from: '*.js',
+				to: './js/controller',
+				context: './src/js/controller'
 			},{
-				from: './src/css/styles.css',
-				to: './css'
+				from: 'styles.css',
+				to: './css',
+				context: './src/css'
 			},{
 				from: './node_modules/vue/dist/vue.min.js',
 				to: './vue/dist'
