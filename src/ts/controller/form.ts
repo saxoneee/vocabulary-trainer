@@ -33,7 +33,14 @@ export default class Form extends AbstractController{
              */
             created: function(){
                 var _me = this,
-                    _promise:any = Utils.ajaxGet('api/data');
+                    _dataName = Utils.getUrlParameter('dataname');
+
+                if(!_dataName){
+                    $('#form').find('button,input').attr('disabled', 'disabled');
+                    return;
+                }
+
+                var _promise:any = Utils.ajaxGet('api/data?dataname=' + _dataName);
         
                 _promise.done(function(pData:any){
                     data = pData;
@@ -121,5 +128,7 @@ export default class Form extends AbstractController{
                 }
             }
         });
+
+        
     }
 }

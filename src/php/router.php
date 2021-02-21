@@ -9,7 +9,8 @@ $dataToReturn = null;
 switch($apiPath){
     case '/data': 
         array_push($headers, 'Content-Type: application/json');
-        $data = file_get_contents('../data/simple.json');
+        $dataName = preg_replace('/[^a-zA-Z0-9\-_]/','', $_GET['dataname']);
+        $data = file_get_contents('../data/'.$dataName.'.json');
         break;
 
     case '/view': 

@@ -9,5 +9,5 @@ import FormController from './controller/form';
 var dd = new DataDropdownController();
 var form = new FormController();
 
-// dd.init();
+dd.init();
 form.init();

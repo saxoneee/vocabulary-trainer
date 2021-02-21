@@ -11,6 +11,13 @@ export default class DataDropDown extends AbstractController{
 
     initView(){
         new Vue({
+            data: {
+                options:{
+                    empty: '',
+                    simple: 'simple',
+                    simple2: 'simple2',
+                },
+            },
             el: '#datadropdown'
         })
     }

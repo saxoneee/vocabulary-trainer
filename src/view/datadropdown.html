@@ -1,9 +1,11 @@
 <div id="datadropdown">
+    <form method="GET">
     <template id="datadropdown">
-        <select>
+        <ons-select id="choose-sel" name="dataname" modifier="material" onchange="this.parentNode.submit()">
           <option v-for="(text, value) in options" :value="value">
             {{ text }}
           </option>
-        </select>
+        </ons-select>
       </template>
+    </form>
 </div>
