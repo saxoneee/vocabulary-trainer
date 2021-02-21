@@ -10,10 +10,11 @@
             <input type="text" autocomplete="off" v-model="answer" ref="answer" :disabled="showValidation && isValid">
             <br>
             <button :hidden="showValidation && isValid">validate</button>
-            <v-ons-button modifier="large" :hidden="showValidation && isValid" onclick="this.parentNode.submit()" style="margin-bottom:5px;">validate</v-ons-button>
+            <!-- <v-ons-button modifier="large" :hidden="showValidation && isValid" onclick="this.parentNode.submit()" style="margin-bottom:5px;">validate</v-ons-button> -->
         </form>
         <form v-on:submit.prevent="onSkipFormSubmit" :hidden="showValidation && isValid">
-            <v-ons-button modifier="large" onclick="this.parentNode.submit()">skip</v-ons-button>
+            <button>skip</button>
+            <!-- <v-ons-button modifier="large" onclick="this.parentNode.submit()">skip</v-ons-button> -->
         </form>
         
         <form v-on:submit.prevent="onResultFormSubmit" :hidden="!showValidation">
