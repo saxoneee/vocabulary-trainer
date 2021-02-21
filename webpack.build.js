@@ -35,7 +35,7 @@ var _webpackCfg = {
 			jQuery: 'jquery'
 		}),
 		new HtmlWebpackPlugin({
-			template: './src/html/index.html'
+			template: './src/view/index.html'
 		}),
 		new CleanWebpackPlugin(),
 		new CopyWebpackPlugin({
