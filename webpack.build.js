@@ -61,8 +61,13 @@ var _webpackCfg = {
 				from: './node_modules/jquery/dist/jquery.min.js',
 				to: './jquery/dist'
 			},{
-				from: './src/data/data.json',
+				context: './src/data',
+				from: '*.json',
 				to: './data'
+			},{
+				context: './src/view',
+				from: '*.html',
+				to: './view'
 			},{
 				from: './src/php',
 				to: './api'
