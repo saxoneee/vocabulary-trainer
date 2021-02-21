@@ -6,13 +6,17 @@ var path = require('path'),
 
 var _webpackCfg = {
 	mode: 'development',
-	entry: './src/js/main.js',
+	entry: './src/ts/main.ts',
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 	},
 
 	module: {
 		rules: [{
+			test: /\.tsx?$/,
+			use: 'ts-loader',
+			exclude: /node_modules/,
+		},{
 			test: /\.css$/i,
 			use: ["style-loader", "css-loader"],
 		},{
@@ -29,6 +33,13 @@ var _webpackCfg = {
 		}
 	]},
 
+	resolve: {
+        extensions: ['.tsx', '.ts', '.js'],
+		alias: {
+            vue: 'vue/dist/vue.js'
+        },
+    },
+
 	plugins: [
 		new webpack.ProvidePlugin({
 			$: 'jquery',
@@ -40,21 +51,6 @@ var _webpackCfg = {
 		new CleanWebpackPlugin(),
 		new CopyWebpackPlugin({
 			patterns: [{
-				from: './src/js/main.js',
-				to: './js'
-			},{
-				from: '*.js',
-				to: './js/base',
-				context: './src/js/base'
-			},{
-				from: '*.js',
-				to: './js/utils',
-				context: './src/js/utils'
-			},{
-				from: '*.js',
-				to: './js/controller',
-				context: './src/js/controller'
-			},{
 				from: 'styles.css',
 				to: './css',
 				context: './src/css'
