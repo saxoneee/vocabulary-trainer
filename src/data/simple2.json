@@ -1,4 +1,8 @@
-[
+{
+    "meta": {
+        "name": "thanks/hello"
+    },
+    "data":[
     "thanks;ありがとう;arigatou",
     "hello;こんにちは;konnichiwa"
-]
+]}

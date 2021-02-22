@@ -1,6 +1,10 @@
-[
+{
+    "meta": {
+        "name": "yes/no/maybe/toast"
+    },
+    "data": [
     "yes;はい;hai",
     "no;いいえ;iie",
     "maybe;たぶん;tabun",
     "toast;トースト;Tōsuto;tosuto"
-]
+]}

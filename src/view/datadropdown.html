@@ -2,8 +2,8 @@
     <form method="GET">
     <template id="datadropdown">
         <ons-select id="choose-sel" name="dataname" modifier="material" onchange="this.parentNode.submit()">
-          <option v-for="(text, value) in options" :value="value">
-            {{ text }}
+          <option v-for="(props, key) in options" :value="key" :selected="props.selected">
+            {{props.name}}
           </option>
         </ons-select>
       </template>

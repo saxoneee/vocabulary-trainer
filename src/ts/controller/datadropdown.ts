@@ -10,15 +10,24 @@ export default class DataDropDown extends AbstractController{
     tmplName = 'datadropdown';  
 
     initView(){
-        new Vue({
-            data: {
-                options:{
-                    empty: '',
-                    simple: 'simple',
-                    simple2: 'simple2',
+        const _dataPromise = Utils.ajaxGet('/api/datalist');
+
+        _dataPromise.done(function(pListData){
+            const _options:any = {};
+            const _urlParamDataname:any = Utils.getUrlParameter('dataname');
+            $.each(pListData, function(index, item){
+                _options[item.id] = {
+                    name: item.name,
+                    selected: (_urlParamDataname === item.id) ? 1 : 0
+                };
+            });
+
+            new Vue({
+                data: {
+                    options:_options,
                 },
-            },
-            el: '#datadropdown'
+                el: '#datadropdown'
+            })
         })
     }
 }
