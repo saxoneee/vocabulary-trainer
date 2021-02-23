@@ -7,16 +7,47 @@ import AbstractController from './abstractController';
 
 
 export default class Form extends AbstractController{
-    tmplName = 'form';  
+    tmplName = 'form';
+
+    instance:any = null;
+
+    initOptions(){
+        const _me = this,
+            _dataPromise = Utils.ajaxGet('/api/datalist');
+
+        _dataPromise.done(function(pListData){
+            const _options:any = {};
+            const _urlParamDataname:any = Utils.getUrlParameter('dataname');
+            $.each(pListData, function(index, item){
+                _options[item.id] = {
+                    name: item.name,
+                    selected: (_urlParamDataname === item.id) ? 1 : 0
+                };
+            });
+
+            
+
+                _me.instance.options = _options;
+
+                setTimeout(function(){
+                    console.log('FUCGH');
+                    _me.instance.$forceUpdate();
+                },1000);
+            
+            
+        })
+    }
 
     initView(){
-        
+        var _ctrl = this;
         var data:any = null;
 
-        new Vue({
+        this.instance = new Vue({
             el: '#form',
         
             data: {
+                options: [],
+
                 correctAmount: 0,
                 errorAmount: 0,
         
@@ -34,6 +65,8 @@ export default class Form extends AbstractController{
             created: function(){
                 var _me = this,
                     _dataName = Utils.getUrlParameter('dataname');
+
+                    _ctrl.initOptions();
 
                 if(!_dataName){
                     $('#form').find('button,input').attr('disabled', 'disabled');

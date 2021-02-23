@@ -1,13 +1,25 @@
+<ons-page>
 <div id="form">
+    <div id="datadropdown">
+        <form method="GET">
+        <template id="datadropdown">
+            <select name="dataname" onchange="this.parentNode.submit()">
+              <option v-for="(props, key) in options" :value="key" :selected="props.selected">
+                {{props.name}}
+              </option>
+            </select>
+          </template>
+        </form>
+    </div>
     <div class="box">
         <div>
             <p>correct: {{correctAmount}}</p>
             <p>error: {{errorAmount}}</p>
         </div>
         <form v-on:submit.prevent="onQuestFormSubmit" disabled>
-            <input type="text" readonly v-model="question" :disabled="showValidation && isValid">
+            <textarea style="min-height:200px" type="text" readonly v-model="question" :disabled="showValidation && isValid"></textarea>
             <br>
-            <input type="text" autocomplete="off" v-model="answer" ref="answer" :disabled="showValidation && isValid">
+            <textarea style="min-height:200px" type="text" autocomplete="off" v-model="answer" ref="answer" :disabled="showValidation && isValid"></textarea>
             <br>
             <button :hidden="showValidation && isValid">validate</button>
             <!-- <v-ons-button modifier="large" :hidden="showValidation && isValid" onclick="this.parentNode.submit()" style="margin-bottom:5px;">validate</v-ons-button> -->
@@ -28,3 +40,4 @@
         </form>
     </div>
 </div>
+</ons-page>
